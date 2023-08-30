@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-dark">
+          <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="70"><use xlink:href="#bootstrap"></use></svg>
+            <h1 class="fs-4" style="color:white">General Company Analyser</h1>
+          </a>
+        </header>
+      </div>
+
+      <div class="b-example-divider"></div>
+
+      <div class="container my-5">
+        <div class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5">
+          <svg class="bi mt-5 mb-3" width="48" height="48"><use xlink:href="#check2-circle"></use></svg>
+          <h1 class="text-body-emphasis">Company Ticket</h1>
+          <form class="col-6 col-lg-auto pt-4 pb-4 mb-3 mb-lg-0 me-lg-3" role="search" method="post" action="{{ url_for('analyser') }}">
+            <input type="search" class="form-control form-control-dark text-bg-white" placeholder="Company ticket..." aria-label="Search" name="ticket"><br>
+            <button class="btn btn-dark px-5 mb-5" type="submit" value="Submit">
+          </form>
+          
+            Analyse
+          </button>
+        </div>
+      </div>
+</body>
+</html>
+!-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-dark">
+          <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="70"><use xlink:href="#bootstrap"></use></svg>
+            <h1 class="fs-4" style="color:white">General Company Analyser</h1>
+          </a>
+        </header>
+      </div>
+
+      <div class="b-example-divider"></div>
+
+      <div class="container my-5">
+        <div class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5">
+          <svg class="bi mt-5 mb-3" width="48" height="48"><use xlink:href="#check2-circle"></use></svg>
+          <h1 class="text-body-emphasis">Company Ticket</h1>
+          <form class="col-6 col-lg-auto pt-4 pb-4 mb-3 mb-lg-0 me-lg-3" role="search" method="post" action="{{ url_for('analyser') }}">
+            <input type="search" class="form-control form-control-dark text-bg-white" placeholder="Company ticket..." aria-label="Search" name="ticket"><br>
+            <button class="btn btn-dark px-5 mb-5" type="submit" value="Submit">
+              Analyse
+            </button>
+          </form>
+        </div>
+      </div>
+</body>
+</html>

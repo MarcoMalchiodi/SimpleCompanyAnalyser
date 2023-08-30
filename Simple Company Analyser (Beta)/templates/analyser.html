@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyser</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-dark">
+          <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="70"><use xlink:href="#bootstrap"></use></svg>
+            <h1 class="fs-4" style="color:white">{{ ticket }} Summary</h1>
+          </a>
+        </header>
+      </div>
+
+      <div class="b-example-divider"></div>
+
+      <div class="container px-4 py-5" id="icon-grid">
+        <h2 class="pb-2 border-bottom">Financial Statement <p>(in thousands)</p></h2>
+    
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Total Revenue</h3>
+              <p class="pt-3"><b>{{ date.year-1 }}</b> {{ total_revenue[0] }}</p>
+              <p><b>{{ date.year-2 }}</b> {{ total_revenue[1] }}</p>
+              <p><b>{{ date.year-3 }}</b> {{ total_revenue[2] }}</p>
+              <p><b>{{ date.year-4 }}</b> {{ total_revenue[3] }}</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Gross Profit</h3>
+              <p class="pt-3"><b>{{ date.year-1 }}</b> {{ gross_profit[0]}}</p>
+              <p><b>{{ date.year-2 }}</b> {{ gross_profit[1] }}</p>
+              <p><b>{{ date.year-3 }}</b> {{ gross_profit[2] }}</p>
+              <p><b>{{ date.year-4 }}</b> {{ gross_profit[3] }}</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Net Income</h3>
+              <p class="pt-3"><b>{{ date.year-1 }}</b> {{ net_income[0] }}</p>
+              <p><b>{{ date.year-2 }}</b> {{ net_income[1] }}</p>
+              <p><b>{{ date.year-3 }}</b> {{ net_income[2] }}</p>
+              <p><b>{{ date.year-4 }}</b> {{ net_income[3] }}</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Total Assets</h3>
+              <p class="pt-3"><b>{{ date.year-1 }}</b> {{ total_assets[0]}}</p>
+              <p><b>{{ date.year-2 }}</b> {{ total_assets[1]}}</p>
+              <p><b>{{ date.year-3 }}</b> {{ total_assets[2]}}</p>
+              <p><b>{{ date.year-4 }}</b> {{ total_assets[3]}}</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Total Liabilities</h3>
+              <p class="pt-3"><b>{{ date.year-1 }}</b> {{ total_liabilities[0]}}</p>
+              <p><b>{{ date.year-2 }}</b> {{ total_liabilities[1]}}</p>
+              <p><b>{{ date.year-3 }}</b> {{ total_liabilities[2]}}</p>
+              <p><b>{{ date.year-4 }}</b> {{ total_liabilities[3]}}</p>
+
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Current Assets</h3>
+              <p class="pt-3"><b>{{ date.year-1 }}</b> {{ current_assets[0]}}</p>
+              <p><b>{{ date.year-2 }}</b> {{ current_assets[1]}}</p>
+              <p><b>{{ date.year-3 }}</b> {{ current_assets[2]}}</p>
+              <p><b>{{ date.year-4 }}</b> {{ current_assets[3]}}</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Current Liabilities</h3>
+              <p class="pt-3"><b>{{ date.year-1 }}</b> {{ current_liabilities[0]}}</p>
+              <p><b>{{ date.year-2 }}</b> {{ current_liabilities[1]}}</p>
+              <p><b>{{ date.year-3 }}</b> {{ current_liabilities[2]}}</p>
+              <p><b>{{ date.year-4 }}</b> {{ current_liabilities[3]}}</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Stockholders' Equity</h3>
+              <p class="pt-3"><b>{{ date.year-1 }}</b> {{ stockholders_equity[0]}}</p>
+              <p><b>{{ date.year-2 }}</b> {{ stockholders_equity[0]}}</p>
+              <p><b>{{ date.year-3 }}</b> {{ stockholders_equity[0]}}</p>
+              <p><b>{{ date.year-4 }}</b> {{ stockholders_equity[0]}}</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Estimated Shares Outstanding</h3>
+              <p class="pt-3"><b>Current year:</b> {{ shares_outstanding }}</p>
+            </div>
+          </div>
+
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Latest closing price</h3>
+              <p class="pt-3"> {{ stock_price }}$</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="b-example-divider"></div>
+
+      <div class="container px-4 py-5" id="icon-grid">
+        <h2 class="pb-2 border-bottom">Indices</h2>
+    
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Gross Profit Margin</h3>
+              <p class="pt-3"><b>{{ date.year-1 }}</b> {{ (gross_profit_margin[0]*100) | round}}%</p>
+              <p><b>{{ date.year-2 }}</b> {{ (gross_profit_margin[1]*100) | round}}%</p>
+              <p><b>{{ date.year-3 }}</b> {{ (gross_profit_margin[2]*100) | round}}%</p>
+              <p><b>{{ date.year-4 }}</b> {{ (gross_profit_margin[3]*100) | round}}%</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Liquidity</h3>
+              <p class="pt-3"><b>{{ date.year-1 }}</b> {{ liquidity[0] }}</p>
+              <p><b>{{ date.year-2 }}</b> {{ liquidity[1] }}</p>
+              <p><b>{{ date.year-3 }}</b> {{ liquidity[2] }}</p>
+              <p><b>{{ date.year-4 }}</b> {{ liquidity[3] }}</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">ROA</h3>
+              <p class="pt-3"><b>{{ date.year-1 }}</b> {{ (roa[0]*100) | round}}%</p>
+              <p><b>{{ date.year-2 }}</b> {{ (roa[1]*100) | round}}%</p>
+              <p><b>{{ date.year-3 }}</b> {{ (roa[2]*100) | round}}%</p>
+              <p><b>{{ date.year-4 }}</b> {{ (roa[3]*100) | round }}%</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">ROE</h3>
+              <p class="pt-3"><b>{{ date.year-1 }}</b> {{ return_on_shar_eq[0] }}</p>
+              <p><b>{{ date.year-2 }}</b> {{ return_on_shar_eq[1] }}</p>
+              <p><b>{{ date.year-3 }}</b> {{ return_on_shar_eq[2] }}</p>
+              <p><b>{{ date.year-4 }}</b> {{ return_on_shar_eq[3] }}</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Debt:Sharehold. Equity</h3>
+              <p class="pt-3"><b>{{ date.year-1 }}</b> {{ debt_to_shareq[0] }}</p>
+              <p><b>{{ date.year-2 }}</b> {{ debt_to_shareq[1] }}</p>
+              <p><b>{{ date.year-3 }}</b> {{ debt_to_shareq[2] }}</p>
+              <p><b>{{ date.year-4 }}</b> {{ debt_to_shareq[3] }}</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">EPS</h3>
+            <p class="pt-3"><b>{{ date.year-1 }}</b> {{ eps }}</p>
+          </div>
+        </div>
+      <div class="col d-flex align-items-start">
+      <div>
+        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">PE Ratio</h3>
+        <p class="pt-3"><b>{{ date.year-1 }}</b> {{ pe_ratio }}</p>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="b-example-divider"></div>
+
+
+
+      <!--#############################    AVERAGES   ###############################-->
+      <div class="container-fluid px-0 py-5" id="icon-grid">
+        <h2 class="pb-2 border-bottom bg-dark px-4" style="color:white">Price Averages</h2>
+    
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-1 row-cols-lg-12 g-4 px-5 py-5">
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">50 Day Average</h3>
+              <p class="pt-3">Average stock price over the past 50 days: {{ fifty_average }}$</p>
+              <p>{{ fifty_chart }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-1 row-cols-lg-12 g-4 px-5 pt-3 pb-5">
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">200 Day Average</h3>
+              <p class="pt-3">Average stock price over the past 200 days: {{ two_h_average}}$</p>
+              <p>{{ two_h_chart }}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="b-example-divider"></div>
+
+      <!--####################  NEWS  #######################-->
+
+      <div class="container-fluid px-0 py-5" id="icon-grid">
+        <h2 class="pb-2 border-bottom bg-dark px-4" style="color:white">Latest News</h2>
+
+        {% for article in articles: %}
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-1 row-cols-lg-12 g-4 px-5 py-5">
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">{{ article['title'] }}</h3>
+              <p class="pt-3">{{ article['description'] }}</p>
+              <a href="{{ article['link'] }}">{{ article['link'] }}</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+
+</body>
+</html>
